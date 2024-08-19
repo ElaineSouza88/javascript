@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+
+body {
+    background-image: linear-gradient(to right, #C434C5, #3DE6EF, #5F6BE7, #B7D1F3) ;
+}
+
+h1 {
+    text-align: center;
+    color: rgba(2, 2, 24, 0.781);
+
+}
