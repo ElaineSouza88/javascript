@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras formatações</title>
+    <style>
+        body {
+            font: 20px normal arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Outras formatações em JavaScript</h1> <hr>
+    <script>
+        var nome = window.prompt('Qual é o seu nome? ')
+        document.write(`Olá <strong>${nome}</strong>. Seu nome tem ${nome.length} letras. <br/>`)
+        document.write(`Seu nome em letras maiúsculas fica assim: ${nome.toUpperCase()}<br/>` )
+        document.write(`Olá ${nome}, seu nome em letras minúsculas fica assim: ${nome.toUpperCase()}<br/>`)
+    </script>
+</body>
+</html>
