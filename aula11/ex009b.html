@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio ex 009 Datalist</title>
+</head>
+<body>
+    <h1>Exemplo utilizando datalist</h1> <hr>
+    <p>Selecione sua nacionalidade:</p> 
+    <input type="text" name="txpais" id="txpais" list="lspais">
+    <datalist id="lspais">
+        <option value="Brasil"></option>
+        <option value="Estados Unidos"></option>
+        <option value="França"></option>
+        <option value="Honduras"></option>
+        <option value="Itália"></option> 
+    </datalist>
+    <input type="button" value="Enviar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            var txpais = window.document.querySelector('input#txpais')
+            var res = window.document.querySelector('div#res')
+            var nacionalidade = String(txpais.value)
+            res.innerHTML = `<p>Você é do(de) <strong>${nacionalidade}<strong>!</p>`
+            if (nacionalidade == 'Brasil') {
+                res.innerHTML += `Bem vindo(a) de volta!</p>.`
+            } else {
+                res.innerHTML += `<p>Você é <strong>estrangeiro</strong> ! Seja bem vindo ao nosso país! </p>`
+            }
+        }      
+    </script>
+</body>
+</html>
