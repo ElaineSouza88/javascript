@@ -3,10 +3,10 @@
 ###  Conteúdo Abordado:
 
 * **Comandos Básicos:** 
-    * Variáveis 变量
+    * Variáveis
     * Tipos de dados 
-    * Operadores 运算符
-    * Funções 函数
+    * Operadores 
+    * Funções 
 * **DOM (Document Object Model):** 
     * Manipulando elementos HTML  HTMLElement
     * Eventos 
