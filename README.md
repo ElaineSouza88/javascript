@@ -1,5 +1,7 @@
 ##  Curso para iniciantes de JavaScript 
 
+Curso minisrado pelo professor Gustavo Guanabara do site [Curso em Vídeo](https://www.cursoemvideo.com/) com duração de 40 horas. O curso conta com certificado e exercícios para fixação do conteúdo.
+
 ###  Conteúdo Abordado:
 
 * **Comandos Básicos:** 
