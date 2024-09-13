@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios com DOM</title>
+    <style>
+        body {
+        background-color: rgba(86, 86, 233, 0.747);
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top: 250px;
+        }
+
+        h1, div{
+            background-color: white;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        div {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manipulando eventos DOM</h1>
+    <div class="container">
+        <p>Quando utilizar o querySelector e o querySelectorAll?</p>
+        <p class="destaque">TESTE PARÁGRAFO 2</p>
+        <ul>
+            <li><strong>Selecionar um elemento único:</strong> Use querySelector</li><br>
+            <li><strong>Selecionar múltiplos elementos:</strong> Use querySelectorAll.</li><br>
+            <li><strong>Realizar operações em todos os elementos encontrados:</strong> Use querySelectorAll e itere sobre a NodeList.</li>
+        </ul>
+        <button>Botão 1</button>
+        <button>Botão 2</button>
+    </div>
+    <script>
+        //Para selecionar item específico
+        let primeiroParagrafo = document.querySelector('p') //selecione o item p do documento HTML
+        primeiroParagrafo.style.color = 'blue' // a esse elemento aplique uma cor de texto azul.
+
+        //Selecionar todos os botões e add um evento de clique
+        let botoes = document.querySelectorAll('button') //seleciona todos os botões
+        botoes.forEach(botao => {  //para cada notão
+            botao.addEventListener('click', () => { //adicone um evento de clique.
+                alert('Botão clicado!') //exiba um alerta com essa frase.
+            })
+        }
+        ) 
+
+        //Selecionar todos os parágrafos que tem o item 'destaque'
+        let paragrafoDestaque = document.querySelectorAll('.destaque') // seleciona os parágrafos que levam a classe 'destaque'
+
+        paragrafoDestaque.forEach(paragrafo => { //para cada paragrafo da variável paragrafoDestaque
+            paragrafo.style.textAlign = 'center' //alinhe o texto no centro
+        })
+    </script>
+</body>
+</html>

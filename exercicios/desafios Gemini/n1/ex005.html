@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios com DOM</title>
+    <style>
+        body {
+        background-color: rgba(86, 86, 233, 0.747);
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top: 250px;
+        }
+
+        h1, ul{
+            background-color: white;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        ul {
+            text-align: left;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manipulando eventos DOM</h1>
+    <ul id="minhaLista">
+        <li id="item1">Item 1</li> 
+        <li>Item 2</li>
+    </ul>
+    <button onclick="corFundo()">Mudar de cor</button>
+    <script>
+        function corFundo() {
+            let lista = document.getElementById('item1') //acrescentado um ID para o item que queremos modificar.
+
+            lista.style.backgroundColor = 'gray' //muda o item 1 para a cor entre aspas simples.
+        }
+    </script>
+</body>
+</html>

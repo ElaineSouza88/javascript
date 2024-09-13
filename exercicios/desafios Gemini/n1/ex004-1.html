@@ -35,7 +35,7 @@
     <ul id="minhaLista">
         <li>Item 1</li>
         <li>Item 2</li>
-        <li>Item 3</li>
+        <li class="remover">Item 3</li>
         <li>Item 4</li>
     </ul>
     <!-- Botão criado para remover item e chamar a função -->
@@ -44,16 +44,27 @@
         function removerItem() {
             const lista = document.getElementById('minhaLista') // variável criada para armazenar os itens da lista.
 
-            let itemRemovido = lista.querySelector('li:contains("Item 3")') // seleciona todos os item com o texto Item 3.
+            let itemRemovido = lista.querySelectorAll('.remover') // seleciona o item que possui a classe remover.
 
-            while (itemRemovido) {
-                lista.removeChild(itemRemovido)
-
-                itemRemovido = lista.querySelector('li:contains("Item 3")')
-                // não está funcionando
-            }
+            itemRemovido.forEach(item => { //para cada item removido
+                lista.removeChild(item) // remova o filho da classe remover
+            })
+            
         } 
     </script>
+        <!-- Essa estrutura, mesmo estando igual a solução proposta, possivelmente tinha algum atributo que não era compatível com o navegador, uma das opções era o uso do contains. -->
+       <!-- function removerItem() {
+        const lista = document.getElementById('minhaLista') // variável criada para armazenar os itens da lista.
+
+        let itemRemovido = lista.querySelector('li:contains("Item 3")') // seleciona todos os item com o texto Item 3.
+
+        while (itemRemovido) {
+            lista.removeChild(itemRemovido)
+
+            itemRemovido = lista.querySelector('li:contains("Item 3")')
+            // não está funcionando
+        }
+    } -->
 </body>
 </html>
 
