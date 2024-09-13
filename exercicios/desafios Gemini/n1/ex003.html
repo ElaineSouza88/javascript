@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios com DOM</title>
+    <style>
+        body {
+        background-color: rgba(86, 86, 233, 0.747);
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top: 250px;
+        }
+
+        h1, div {
+            background-color: white;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        div {
+            font-size: 2em;
+        }
+
+        .destaque {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- //Desafios para prática do DOM
+
+    //3: Altere a classe de um elemento DOM -->
+    <!-- Para esse teste é criamos um botão para ver a alteração da classe -->
+
+    <h1>Manipulação de DOM pelo ID usando JavaScript</h1>
+    <button id="novoBotao">Clique aqui</button> 
+    <script>
+        let botao = document.getElementById('novoBotao') // variavel criada para receber alteração da classe no id.
+
+        
+        botao.addEventListener("click", function(){
+            botao.classList.toggle("destaque") //botão fica com outra cor ao ser clicado.
+        })
+    </script>
+</body>
+</html>
+
+

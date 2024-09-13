@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios com DOM</title>
+    <style>
+        body {
+        background-color: rgba(86, 86, 233, 0.747);
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top: 250px;
+        }
+
+        h1, ul {
+            background-color: white;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        ul {
+            padding: 25px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- //Desafios para prática do DOM
+
+    //Manipulação dos elementos
+    //4: Remova um elemento do DOM-->
+    <!-- Resolução para remover apenas o item esejado de uma lista -->
+
+    <h1>Manipulação de DOM pelo ID usando JavaScript</h1>
+    <ul id="minhaLista">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+    <!-- Botão criado para remover item e chamar a função -->
+    <button onclick="removerItem()">Remover item 3</button> 
+    <script>
+        function removerItem() {
+            const lista = document.getElementById('minhaLista') // variável criada para armazenar os itens da lista.
+
+            let itemRemovido = lista.querySelector('li:contains("Item 3")') // seleciona todos os item com o texto Item 3.
+
+            while (itemRemovido) {
+                lista.removeChild(itemRemovido)
+
+                itemRemovido = lista.querySelector('li:contains("Item 3")')
+                // não está funcionando
+            }
+        } 
+    </script>
+</body>
+</html>
+
+
+ 
