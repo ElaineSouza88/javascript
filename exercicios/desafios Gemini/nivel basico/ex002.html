@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios com DOM</title>
+    <style>
+        body {
+        background-color: rgba(86, 86, 233, 0.747);
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top: 250px;
+        }
+
+        h1, div {
+            background-color: white;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        div {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <!-- //Desafios para prática do DOM
+
+    //Manipulação dos elementos
+    //2: Crie um novo elemento (p.ex., um parágrafo), adicione um texto e insira-o no DOM -->
+
+    <h1>Manipulação de DOM pelo ID usando JavaScript</h1>
+    <div id="p"></div>
+    <script>
+        let novoParagrafo = document.createElement("p") // cria um elemento com a tag p (parágrafo)
+
+        novoParagrafo.textContent = "Texto criado para inserir no parágrafo." // adiciona o texto ao p
+
+        let container = document.getElementById("p") // variável criada para pegar container com ID p.
+
+        container.appendChild(novoParagrafo) // insere o novo parágrafo no DOM que neste caso é o container.
+    </script>
+</body>
+</html>
+
+
