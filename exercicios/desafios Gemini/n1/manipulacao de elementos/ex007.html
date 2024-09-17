@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios com DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Manipulação de DOM pelo ID usando JavaScript</h1>
+    <h2>Crie um novo elemento de lista (li) com o texto "Novo item" e adicione-o ao final de uma lista não ordenada com o ID "minhaLista"</h2>
+    <div>
+        <ul id="minhaLista">
+            <li>Item 1</li>
+            <li>item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+    <script>
+        let novoElemento = document.createElement('li') // adiciona um novo elemento a lista.
+        novoElemento.textContent = 'Item 4' // novo elemento terá o nome de item 4.
+
+        let minhaLista = document.getElementById('minhaLista') //seleciona a lista que leva esse ID.
+
+        minhaLista.appendChild(novoElemento) // adiciona o novo elemento a lista.
+    </script>
+</body>
+</html>
