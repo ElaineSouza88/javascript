@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios com DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Manipulação de DOM pelo ID usando JavaScript</h1>
+    <h2>Esconda um elemento</h2>
+    <div>
+        <p>Texto 1</p>
+    </div>
+    <div>
+        <p id="esconde">Texto 2</p>
+    </div>
+    <div>
+        <p>Texto 3</p>
+    </div>
+    <script>
+        let elemento = document.getElementById('esconde')
+        elemento.style.display = 'none' //esconde
+    </script>
+</body>
+</html>
