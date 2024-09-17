@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios com DOM</title>
+    <style>
+        body {
+        background-color: rgba(86, 86, 233, 0.747);
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top: 250px;
+        }
+
+        h1, div {
+            background-color: white;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        div {
+            font-size: 2em;
+        }
+
+        /* A classe antiga se chamava destaque */
+        .animacao { 
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manipulação de DOM com JavaScript</h1>
+    <h2>Selecione todos os elementos com a classe "destaque" e adicione a eles uma nova classe "animacao"</h2>
+    <div>
+        <p class="destaque">Elemento 1</p>
+        <p>Elemento 2</p>
+        <p class="destaque">Elemento 3</p>
+    </div>
+    <script>
+        let novaClasse = document.querySelectorAll('.destaque') //seleciona todos os seletores com a classe destaque.
+
+        novaClasse.forEach (elemento => { //para cada elemento, 
+            elemento.classList.add('animacao') //adicione uma nova classe chamada animação.
+        })
+    </script>
+</body>
+</html>

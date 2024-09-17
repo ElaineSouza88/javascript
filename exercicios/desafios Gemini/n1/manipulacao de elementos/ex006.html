@@ -35,10 +35,12 @@
     <!-- Para esse teste é criamos um botão para ver a alteração da classe -->
 
     <h1>Manipulação de DOM pelo ID usando JavaScript</h1>
+    <h2>Altere a classe de um elemento DOM e mude sua cor e estilo.</h2>
     <button id="novoBotao">Clique aqui</button> 
     <script>
         let botao = document.getElementById('novoBotao') // variavel criada para receber alteração da classe no id.
 
+        //essa estrutura é uma outra forma de alterar um elemento DOM usando o adicionar evento e uma funçao
         
         botao.addEventListener("click", function(){
             botao.classList.toggle("destaque") //botão fica com outra cor ao ser clicado.

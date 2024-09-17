@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios com DOM</title>
+    <style>
+        body {
+        background-color: rgba(86, 86, 233, 0.747);
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top: 250px;
+        }
+
+        h1, div {
+            background-color: white;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        div {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manipulação de DOM pelo ID usando JavaScript</h1>
+    <h2>Crie um botão com o texto "Clique aqui". Ao clicar nesse botão, altere o texto de um parágrafo com o ID "paragrafo" para "Texto alterado!"</h2>
+    <div>
+        <p id="paragrafo">Texto inicial</p>
+        <button id="meubotao" onclick="paragrafo.textContent = 'Texto Alterado !'">Clique aqui</button>
+    </div>
+
+    <!-- Sempre que iniciar um script não esquecer de declarar as variáveis.
+    EX:  
+        <button id="meubotao">Clique aqui</button>
+        <script>
+            const botao = document.getElementById('meubotao');
+            const paragrafo = document.getElementById('paragrafo');
+
+            botao.addEventListener('click', () => {
+            paragrafo.textContent = 'Texto Alterado !';
+            });
+        </script>
+    -->
+</body>
+</html>
+
+

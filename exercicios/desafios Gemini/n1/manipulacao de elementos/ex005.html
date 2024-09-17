@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios com DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Manipulação de DOM com JavaScript</h1>
+    <h2>Selecione todos os elementos com a classe "destaque" e adicione a eles uma nova classe "animacao"</h2>
+    <div>
+        <p class="destaque">Texto alternativo 1</p>
+    </div>
+    <div>
+        <p>Texto alternativo 2</p>
+    </div>
+    <div>
+        <p class="destaque">Texto alternativo 3</p>
+    </div>
+
+    <script>
+        let novaClasse = document.querySelectorAll('.destaque') //não esquecer o ponto quando for mencionar a classe.
+        novaClasse.forEach(elemento => {
+            elemento.classList.add('corTexto')
+        })
+    </script>
+</body>
+</html>
