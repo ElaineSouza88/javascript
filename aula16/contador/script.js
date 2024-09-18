@@ -12,6 +12,10 @@ function contador() {
         let i = Number(ini.value) // variável criada para transformar string em nº
         let f = Number(fim.value)
         let p = Number(passo.value)
+        if (p <= 0) {
+            window.alert('Passo inválido, iremos considerar 1!')
+                p = 1
+        }
 
         if ( i < f ) {
             //contagem crescente
@@ -19,7 +23,7 @@ function contador() {
                 res.innerHTML += `${c} \u{1F449} `
             }
         } else {
-            for (let c = i; c += f; c += p) {
+            for (let c = i; c >= f; c -= p) {
                 res.innerHTML += `${c} \u{1F449}`
             }
         }
