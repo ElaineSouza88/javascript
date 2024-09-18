@@ -10,5 +10,4 @@ let c = 1
 while (c <= 100) {
     console.log(soma)
     soma =+ c
-    c++
 }
